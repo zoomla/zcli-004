@@ -1,0 +1,116 @@
+//CSS预编译文件基于Sass语法
+//这是Zoomla!逐浪CMS团队优化的Sass模板，我们为你预置了逐浪字库官方团队的高品质webFont之CDN库，你可完全采用中文定义写作，如下面写法都是合格
+//$中国变量之一:12px;
+//$中国人民中华人民共和国变量之二:#ff0;
+//.a1{width:$中国变量之一 ;}
+//.a2{background: $中国人民中华人民共和国变量之二;}
+//建议CSS注释写在代码段的起始处以使阅读更加流畅
+
+/* 全局样式定义 Powered by Zoomla!逐浪CMS z01.com*/
+@charset "utf-8";
+@import "zoomlaCMS";
+// @import url("https://code.z01.com/Zfonts.css");
+
+
+
+// body{background: #f00;}
+
+a{color: #333;}
+a:hover{color: #444;text-decoration: none;}
+
+.home{min-height: 100vh;background:url(./assets/images/home_bg.jpg) top center no-repeat; background-size: cover;background-attachment:fixed;}
+
+// 首页头部
+.inav{padding-top: 2rem;
+.navbar-brand img{width: 10rem;}
+.nav-link{color: #fff;}
+
+}
+
+// 首页欢迎
+.ihero{padding-top: 12rem;
+h1{font-size: 2.8rem;text-align: center;color: #fff;font-family: $苹方极细字体;font-weight: 100;}	
+}
+
+// 首页搜索
+.iwell{height: 14rem;background: #96C93D;}
+
+// 首页列表
+.well_list{@include myul;color: #666;margin-bottom: 2rem;
+li:hover{@include 五秒消失切换;margin-left: -2rem;margin-right: -2rem;}
+
+}
+
+.well_listBox{margin-top:1rem;padding: 1rem 2rem; min-height: 20rem;background: #fff;border-radius: 1rem;
+strong{font-size: 1.4rem;font-weight: 100;}
+span{display: block;line-height: 2.6rem;}
+p{@include 段落文本对齐处理;line-height: 1.4rem; font-size: 0.92rem;}
+small{display: block;padding-right: 0.2rem; text-align: right;opacity: 0.3;}
+img{width: 100%;opacity: 0.68;}
+}
+
+.well_listBox:hover{
+p{color: #444;}	
+small{opacity: 0.8;}
+img{opacity: 1;}
+}
+
+
+
+/*右侧固定在线客服*/
+.kefu { position: fixed; top: 50%; right: 20px; margin-top: -87px; width: 2.3rem;text-align: center;/*z-index: 1200;*/ 
+ul {@include myul; }
+a { position: relative; float: right; margin-top: 0.1rem; padding-right: 1.8rem;width: 34px;height: 34px; line-height: 34px; background: #7a6e6e;  color: #fff; border-radius: 4px; overflow: hidden;  transition: width 0.5s; -moz-transition: width 0.5s; -webkit-transition: width 0.5s; -o-transition: width 0.5s; }
+a:hover { background: #c81623; width: 100px;text-decoration: none; }
+a:hover span { display: block; }
+a:hover i { background: #c81623; }	
+li i { display: block; position: absolute; float: right; top: 0; right: 0px; height: 34px; width: 34px; line-height: 34px; font-size: 20px; background: #7a6e6e;border-radius: 4px; z-index: 10;  }
+li span {font-size: 0.9rem; }
+li.kefu_qrcode a { overflow: visible; }
+li.kefu_qrcode a:hover { width: 191px; }
+li.kefu_qrcode a:hover span { display: block; }
+li.kefu_qrcode a span { display: none; margin-left: 0; padding-left: 10px; padding-right: 10px; padding-bottom: 0; background: #c81623; border-radius: 4px;width: 155px; }
+li.kefu_qrcode a span img { display: block; width: 135px; }
+li.kefu_wechat a { overflow: visible; }
+li.kefu_wechat a:hover { width: 191px; }
+li.kefu_wechat a:hover span { display: block; }
+li.kefu_wechat a span { display: none; margin-left: 0; margin-top: -58px; }
+li.kefu_wechat a span img { padding: 10px; background: #c81623; border-radius: 4px; width: 155px; }
+}
+	
+
+// 分页器
+.home_pagination{display: block;margin-top: 1rem; width: 100%;
+.page-link{background-color: #999;color: #ccc;}
+.page-link:hover{background-color: #fff;}
+.page-item.disabled .page-link{background-color: #999;}
+.active .page-link{background: #666;border-color: #dee2e6;}
+.active .page-link:hover{background: #fff;color: #000; }
+.page-item:first-child .page-link{border-top-left-radius:0;border-bottom-left-radius: 0;}
+.page-item:last-child .page-link{border-top-right-radius: 0;border-bottom-right-radius: 0;}
+}
+
+
+
+//下方电话
+.MYbottom{@include dflex;  background: #535353;line-height: 2.8rem;text-align: center;color: #fff;
+a{display: inline-block;float:right;width:40%;background: #ea6948;color: #fff;}
+i{font-size: 1.6rem;}
+}
+
+footer{line-height: 4rem; color: #ccc;
+a{color: #ccc;}
+}
+
+
+@media screen and (max-width:768px){ /*小于768px私有*/
+
+	
+.kefu{display: none;}
+
+}
+
+
+
+
+/*key:UG93ZXJlZCBieSBab29tbGEh6YCQ5rWqQ01TIHd3d3cuejAxLmNvbQ== */

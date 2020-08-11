@@ -1,0 +1,19 @@
+<template>
+  <div class="home">
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <i class="zi zi_user"></i>222
+    <div class="btn btn-info">232323</div>
+  </div>
+</template>
+
+<script>
+// @ is an alias to /src
+import HelloWorld from '@/components/HelloWorld.vue'
+
+export default {
+  name: 'Home',
+  components: {
+    HelloWorld
+  }
+}
+</script>
